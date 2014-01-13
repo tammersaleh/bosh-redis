@@ -1,0 +1,7 @@
+# abort script on any command that exits with a non zero value
+set -e
+
+tar xzf redis-2.8.4.tar.gz
+cd redis-2.8.4
+make
+cp src/* ${BOSH_INSTALL_TARGET}/

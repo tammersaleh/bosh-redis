@@ -1,0 +1,7 @@
+---
+final_name: redis
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/
+

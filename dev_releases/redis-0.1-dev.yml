@@ -1,0 +1,16 @@
+---
+packages:
+- name: redis
+  version: 0.1-dev
+  sha1: 3efdeb4adf7e8a891a29fe335d3609e5fd31a306
+  fingerprint: b9b0eed9769c55aa3cf1713779fc0e412f1183cb
+  dependencies: []
+jobs:
+- name: redis
+  version: 0.1-dev
+  fingerprint: 60c37551fc5ca327e816c143b178453417da37e2
+  sha1: 925a8e3ad5b0ef8bcf86217eda3889ec43f19830
+commit_hash: '00000000'
+uncommitted_changes: false
+name: redis
+version: 0.1-dev

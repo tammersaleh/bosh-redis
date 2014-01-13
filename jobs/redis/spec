@@ -1,0 +1,8 @@
+---
+name: redis
+templates:
+  conf/redis.conf: conf/redis.conf
+  bin/redis_ctl: bin/redis_ctl
+
+packages:
+  - redis
