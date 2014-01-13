@@ -2,3 +2,9 @@
 builds:
   198fd60209bbb91aaaba3e9fbc7561a315e4a8fd:
     version: 0.1-dev
+  000f378e704c3d2da870f2dd1781d3165d406ff5:
+    version: 0.2-dev
+  d1914a6a1b69e3d9473a9aab645fa850974e1076:
+    version: 0.3-dev
+  9bd7c2dabf362017b5b782ba86ab299d903792e9:
+    version: 0.4-dev

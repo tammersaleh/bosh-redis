@@ -3,9 +3,11 @@
 JOB_NAME=redis
 RUN_DIR=/var/vcap/sys/run/$JOB_NAME
 LOG_DIR=/var/vcap/sys/log/$JOB_NAME
-CONFIG_DIR=/var/vcap/jobs/$JOB_NAME/config
+JOB_DIR=/var/vcap/jobs/$JOB_NAME
+CONFIG_FILE=$JOB_DIR/conf/redis.conf
 EPHEMERAL=/var/vcap/data/$JOB_NAME
 PERSISTENT=/var/vcap/store/$JOB_NAME
+PACKAGES_DIR=/var/vcap/packages/$JOB_NAME
 PIDFILE=$RUN_DIR/$JOB_NAME.pid
 RUNAS=vcap
 
@@ -15,9 +17,9 @@ exec 2>> $LOG_DIR/$JOB_NAME.stderr.log
 case $1 in
 
   start)
-    mkdir -p $RUN_DIR $LOG_DIR $EPHEMERAL
+    mkdir -p $RUN_DIR $LOG_DIR $EPHEMERAL $PERSISTENT
     chown -R $RUNAS:$RUNAS $RUN_DIR $LOG_DIR $EPHEMERAL $PERSISTENT
-    redis-server $JOB_DIR/config/redis.conf
+    /var/vcap/packages/redis/redis-server $CONFIG_FILE
     ;;
 
   stop)
